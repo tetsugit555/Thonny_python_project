@@ -375,10 +375,20 @@ class StripeGridApp:
         if direction is None:
             direction = int(rng.choice([-1, 1]))
 
-        if entering:
-            x = -total if direction == 1 else width
+        #if entering:
+        #    x = -total if direction == 1 else width
+        #else:
+        #    x = float(rng.uniform(-total, width))
+        
+        #V5 で書き換え
+        
+                # RGBデータ列は必ず画面の外から登場する
+        if direction == 1:
+            x = -total
         else:
-            x = float(rng.uniform(-total, width))
+            x = width
+        
+        #---------- ここまで
 
         y = float(rng.uniform(
             max(10, height * 0.04),
