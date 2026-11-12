@@ -4,6 +4,8 @@ import queue
 import threading
 from tkinter import ttk, filedialog
 import cv2
+
+#おそらく同じフォルダのモジュールの呼び出し
 from text_renderer import TextRendererMixin
 from stripe_motion import StripeMotionMixin
 from rgb_stream import RGBStreamMixin
